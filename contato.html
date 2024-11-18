@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Lumis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lumis</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Fale Conosco</h1>
+        <p> Entre em contato conosco pelo WhatsApp preenchendo os dados abaixo: </p>
+        <form id="whatsapp-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="assunto">Email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            
+            <button type="button" id="enviar-whatsapp">Enviar via WhatsApp</button>
+        </form>
+        <section>
+            <h2>Informações de Contato</h2>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/999173908" target="_blank">Clique aqui para nos enviar uma mensagem</a></p>
+            <p><strong>E-mail:</strong> contato@lumis.com.br</p>
+            <p><strong>Endereço:</strong> Rua Elegante, 123 - Timbó, SC</p>
+            <!-- Número da Empresa (47) 99917-3908-->          
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lumis - Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Enviar o formulário via WhatsApp
+        document.getElementById("enviar-whatsapp").addEventListener("click", function() {
+            const nome = document.getElementById("nome").value;
+            const assunto = document.getElementById("assunto").value;
+            const mensagem = document.getElementById("mensagem").value;
+            
+            // Verifica se todos os campos estão preenchidos
+            if (!nome || !assunto || !mensagem) {
+                alert("Por favor, preencha todos os campos antes de enviar!");
+                return;
+            }
+            
+            const telefone = "999173908"; // Substitua pelo número do WhatsApp da empresa
+            const texto = `Olá, meu nome é ${nome}.\nAssunto: ${assunto}\nMensagem: ${mensagem}`;
+            const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+            
+            window.open(url, "_blank"); // Abre o link do WhatsApp em uma nova aba
+        });
+    </script>
+</body>
+</html>
+
+

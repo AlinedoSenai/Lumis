@@ -1,0 +1,169 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fef5ff; /* Fundo lilás claro */
+    color: #4a284b; /* Lilás escuro */
+    text-align: center;
+}
+
+header {
+    background-color: #6a2c70; /* Lilás escuro */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4a284b; /* Lilás mais escuro */
+}
+
+/* Estilização de títulos */
+h1, h2 {
+    text-align: center;
+    color: #6a2c70;
+}
+
+/* Estilização para o formulário */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #cfa8d7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a284b;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cfa8d7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background: #6a2c70; /* Lilás escuro */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #4a284b; /* Lilás mais escuro */
+}
+
+/* Estilização para a página de produtos */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente em várias linhas */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+}
+
+.produto-item {
+    flex: 1 1 calc(25% - 20px); /* Largura flexível: 25% do container menos o espaçamento */
+    max-width: calc(25% - 20px);
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #cfa8d7; /* Borda lilás suave */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.produto-item img {
+    width: 100%;
+    max-width: 150px; /* Ajusta o tamanho máximo das imagens */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.produto-item p {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #6a2c70;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .produto-item {
+        flex: 1 1 calc(50% - 20px); /* Dois itens por linha em telas menores */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto-item {
+        flex: 1 1 100%; /* Um item por linha em telas muito pequenas */
+    }
+
+    form {
+        padding: 10px;
+    }
+}
+
+
+
